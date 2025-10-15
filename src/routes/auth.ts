@@ -2,9 +2,9 @@ import { Router, Request, Response } from "express";
 import bcryptjs from "bcryptjs";
 import jwt from "jsonwebtoken";
 
-import User from "./db/schema"; // ✅ If in same folder
+import User from "../db/schema"; // ✅ If in same folder
  // adjust path if needed
-import  {auth, AuthRequest } from "./middlewares/auth"; // assuming you have this
+import  {auth, AuthRequest } from "../middlewares/auth"; // assuming you have this
 
 const authRouter = Router();
 

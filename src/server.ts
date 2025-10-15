@@ -1,5 +1,5 @@
 import express from "express";
-import authRouter from "./auth"
+import authRouter from "./routes/auth"
 import { connectDB } from "./utlis/dbs";import dotenv from "dotenv";
 dotenv.config();
 
