@@ -2,9 +2,10 @@ import express from "express";
 import authRouter from "./routes/auth"
 import { connectDB } from "./utlis/dbs";import dotenv from "dotenv";
 dotenv.config();
+import cors from "cors";
 const port = process.env.PORT || 8000;
 
-const app = express();
+
 const app = express();
 
 // ✅ Allow all origins (for testing)
