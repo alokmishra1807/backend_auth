@@ -5,6 +5,10 @@ dotenv.config();
 const port = process.env.PORT || 8000;
 
 const app = express();
+const app = express();
+
+// ✅ Allow all origins (for testing)
+app.use(cors());
 
 
 connectDB();
