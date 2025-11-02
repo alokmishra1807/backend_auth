@@ -36,6 +36,7 @@ export const auth = async (
 
     req.user = user._id.toString();
     req.token = token;
+    console.log(req.user);
 
     next();
   } catch (e) {
