@@ -78,7 +78,7 @@ songRouter.post("/upload",auth, uploadFile, async (req: AuthRequest, res: Respon
   }
 });
 
-songRouter.get("/list", async (req: Request, res: Response) => {
+songRouter.get("/list",auth, async (req: Request, res: Response) => {
   try {
     const songs = await Song.find();
     res.status(200).json(songs);
