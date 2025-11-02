@@ -26,15 +26,15 @@ songRouter.post("/upload",auth, uploadFile, async (req: AuthRequest, res: Respon
     const { artist, song_name, hex_code } = req.body;
 
     // Upload song to Cloudinary (as audio)
-    const songUpload = await cloudinary.uploader.upload_stream(
-      {
-        resource_type: "video", // needed for audio files
-        folder: "songs",
-      },
-      async (error, result) => {
-        if (error) throw error;
-      }
-    );
+  //  const songUpload = await cloudinary.uploader.upload_stream(
+   //   {
+      //  resource_type: "video", // needed for audio files
+     //   folder: "songs",
+    //  },
+  //    async (error, result) => {
+     //   if (error) throw error;
+    //  }
+  //  );
 
     // But since we’re using memoryStorage, we’ll handle it via buffer manually
     const uploadToCloudinary = (fileBuffer: Buffer, options: any) => {
