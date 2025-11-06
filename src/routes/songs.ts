@@ -106,7 +106,7 @@ songRouter.post("/favorite", auth, async (req: AuthRequest, res: Response) => {
         userId,
       });
       await newFav.save();
-      return res.status(201).json({ message: true });
+      return res.status(200).json({ message: true });
     }
   } catch (err: any) {
     res.status(500).json({ message: "Failed to toggle favorite", error: err.message });
